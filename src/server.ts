@@ -28,13 +28,15 @@ import { filterImageFromURL, deleteLocalFiles } from "./util/util";
     try {
       const filteredpath = await filterImageFromURL(image_url);
       //    3. send the resulting file in the response
-      res.sendFile(filteredpath, () => {
+      res.status(200).sendFile(filteredpath, () => {
         //4. deletes any files on the server on finish of the response
         // QUERY PARAMATERS
         deleteLocalFiles([filteredpath]);
       });
+      
     } catch (err) {
       console.log("this is error", err);
+      res.status(422).send('there is an unexpected error, try again')
     }
 
     //    image_url: URL of a publicly accessible image
