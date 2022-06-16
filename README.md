@@ -30,19 +30,10 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
 ### Deploying your system
 
 Follow the process described in the course to `eb init` a new application and `eb create` a new environment to deploy your image-filter service! Don't forget you can use `eb deploy` to push changes.
+ 
+## SOLUTION ASSIGNMENT
 
-## Stand Out (Optional)
+Elastic Beanstalk endpoint : http://image-filter-dev22.us-east-1.elasticbeanstalk.com/ 
 
-### Refactor the course RESTapi
-
-If you're feeling up to it, refactor the course RESTapi to make a request to your newly provisioned image server.
-
-### Authentication
-
-Prevent requests without valid authentication headers.
-> !!NOTE if you choose to submit this, make sure to add the token to the postman collection and export the postman collection file to your submission so we can review!
-
-### Custom Domain Name
-
-Add your own domain name and have it point to the running services (try adding a subdomain name to point to the processing server)
-> !NOTE: Domain names are not included in AWS’ free tier and will incur a cost.
+<img src="deployment_screenshots/deploy_sample_1.png" />
+<img src="deployment_screenshots/Deploy_sample_postman_2.PNG" />
